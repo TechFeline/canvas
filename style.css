@@ -1,0 +1,52 @@
+.container {
+    text-align: center;
+    height: 100vh; /* Set container height to the full viewport height */
+  }
+  
+  canvas {
+    border: 1px solid #000;
+    cursor: crosshair;
+    width: 100%; /* Set canvas width to 100% of container */
+    height: 100%; /* Set canvas height to 100% of container */
+  }
+  
+  #controls {
+    margin-top: 10px;
+  }
+  
+  #colorPicker {
+    margin-right: 10px;
+  }
+  
+  #sizeSlider {
+    margin-right: 10px;
+  }
+  
+  #clearBtn,
+  #eraserBtn {
+    margin-right: 10px;
+  }
+  
+  /* Add animation */
+  @keyframes buttonClick {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Add active style for eraser button */
+  #eraserBtn.active {
+    background-color: #ccc;
+  }
+  
+  /* Add hover animation for buttons */
+  button:hover {
+    animation: buttonClick 0.3s linear infinite;
+  }
+  
